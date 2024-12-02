@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NextmeetModelStoreContainer" CdmEntityContainer="NextmeetEntities">
+    <EntitySetMapping Name="Complementos">
+      <EntityTypeMapping TypeName="NextmeetModel.Complementos">
+        <MappingFragment StoreEntitySet="Complementos">
+          <ScalarProperty Name="ComplementoID" ColumnName="ComplementoID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Habitaciones">
+      <EntityTypeMapping TypeName="NextmeetModel.Habitaciones">
+        <MappingFragment StoreEntitySet="Habitaciones">
+          <ScalarProperty Name="HabitacionID" ColumnName="HabitacionID" />
+          <ScalarProperty Name="TipoHabitacion" ColumnName="TipoHabitacion" />
+          <ScalarProperty Name="PrecioBase" ColumnName="PrecioBase" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reservas">
+      <EntityTypeMapping TypeName="NextmeetModel.Reservas">
+        <MappingFragment StoreEntitySet="Reservas">
+          <ScalarProperty Name="ReservaID" ColumnName="ReservaID" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
+          <ScalarProperty Name="HoraFin" ColumnName="HoraFin" />
+          <ScalarProperty Name="TipoHabitacion" ColumnName="TipoHabitacion" />
+          <ScalarProperty Name="Complementos" ColumnName="Complementos" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

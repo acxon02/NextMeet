@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NextmeetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="ClienteID" />
+    </Key>
+    <Property Name="ClienteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Correo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Ordenes" Relationship="Self.FK__Ordenes__Cliente__628FA481" FromRole="Clientes" ToRole="Ordenes" />
+  </EntityType>
+  <EntityType Name="Complementos">
+    <Key>
+      <PropertyRef Name="ComplementoID" />
+    </Key>
+    <Property Name="ComplementoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Precio" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DisponibilidadHabitaciones">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HabitacionID" Type="Int32" Nullable="false" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TiposHabitacion" Relationship="Self.FK__Disponibi__Habit__75A278F5" FromRole="DisponibilidadHabitaciones" ToRole="TiposHabitacion" />
+  </EntityType>
+  <EntityType Name="Habitaciones">
+    <Key>
+      <PropertyRef Name="HabitacionID" />
+    </Key>
+    <Property Name="HabitacionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TipoHabitacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PrecioBase" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Insumos">
+    <Key>
+      <PropertyRef Name="InsumoID" />
+    </Key>
+    <Property Name="InsumoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Precio" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="OrdenInsumos" Relationship="Self.FK__OrdenInsu__Insum__6754599E" FromRole="Insumos" ToRole="OrdenInsumos" />
+  </EntityType>
+  <EntityType Name="Ordenes">
+    <Key>
+      <PropertyRef Name="OrdenID" />
+    </Key>
+    <Property Name="OrdenID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClienteID" Type="Int32" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
+    <Property Name="HoraInicio" Type="Time" Precision="7" />
+    <Property Name="HoraFin" Type="Time" Precision="7" />
+    <Property Name="HabitacionID" Type="Int32" />
+    <Property Name="Total" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="Clientes" Relationship="Self.FK__Ordenes__Cliente__628FA481" FromRole="Ordenes" ToRole="Clientes" />
+    <NavigationProperty Name="TiposHabitacion" Relationship="Self.FK__Ordenes__Habitac__6383C8BA" FromRole="Ordenes" ToRole="TiposHabitacion" />
+    <NavigationProperty Name="OrdenInsumos" Relationship="Self.FK__OrdenInsu__Orden__66603565" FromRole="Ordenes" ToRole="OrdenInsumos" />
+  </EntityType>
+  <EntityType Name="OrdenInsumos">
+    <Key>
+      <PropertyRef Name="OrdenInsumoID" />
+    </Key>
+    <Property Name="OrdenInsumoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrdenID" Type="Int32" />
+    <Property Name="InsumoID" Type="Int32" />
+    <NavigationProperty Name="Insumos" Relationship="Self.FK__OrdenInsu__Insum__6754599E" FromRole="OrdenInsumos" ToRole="Insumos" />
+    <NavigationProperty Name="Ordenes" Relationship="Self.FK__OrdenInsu__Orden__66603565" FromRole="OrdenInsumos" ToRole="Ordenes" />
+  </EntityType>
+  <EntityType Name="Reservas">
+    <Key>
+      <PropertyRef Name="ReservaID" />
+    </Key>
+    <Property Name="ReservaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="HoraInicio" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="HoraFin" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="TipoHabitacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Complementos" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Total" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Correo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TiposHabitacion">
+    <Key>
+      <PropertyRef Name="HabitacionID" />
+    </Key>
+    <Property Name="HabitacionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Detalles" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Precio" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="DisponibilidadHabitaciones" Relationship="Self.FK__Disponibi__Habit__75A278F5" FromRole="TiposHabitacion" ToRole="DisponibilidadHabitaciones" />
+    <NavigationProperty Name="Ordenes" Relationship="Self.FK__Ordenes__Habitac__6383C8BA" FromRole="TiposHabitacion" ToRole="Ordenes" />
+  </EntityType>
+  <Association Name="FK__Ordenes__Cliente__628FA481">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
+    <End Role="Ordenes" Type="Self.Ordenes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="ClienteID" />
+      </Principal>
+      <Dependent Role="Ordenes">
+        <PropertyRef Name="ClienteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Disponibi__Habit__75A278F5">
+    <End Role="TiposHabitacion" Type="Self.TiposHabitacion" Multiplicity="1" />
+    <End Role="DisponibilidadHabitaciones" Type="Self.DisponibilidadHabitaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TiposHabitacion">
+        <PropertyRef Name="HabitacionID" />
+      </Principal>
+      <Dependent Role="DisponibilidadHabitaciones">
+        <PropertyRef Name="HabitacionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenInsu__Insum__6754599E">
+    <End Role="Insumos" Type="Self.Insumos" Multiplicity="0..1" />
+    <End Role="OrdenInsumos" Type="Self.OrdenInsumos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Insumos">
+        <PropertyRef Name="InsumoID" />
+      </Principal>
+      <Dependent Role="OrdenInsumos">
+        <PropertyRef Name="InsumoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ordenes__Habitac__6383C8BA">
+    <End Role="TiposHabitacion" Type="Self.TiposHabitacion" Multiplicity="0..1" />
+    <End Role="Ordenes" Type="Self.Ordenes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TiposHabitacion">
+        <PropertyRef Name="HabitacionID" />
+      </Principal>
+      <Dependent Role="Ordenes">
+        <PropertyRef Name="HabitacionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenInsu__Orden__66603565">
+    <End Role="Ordenes" Type="Self.Ordenes" Multiplicity="0..1" />
+    <End Role="OrdenInsumos" Type="Self.OrdenInsumos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ordenes">
+        <PropertyRef Name="OrdenID" />
+      </Principal>
+      <Dependent Role="OrdenInsumos">
+        <PropertyRef Name="OrdenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NextmeetEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" />
+    <EntitySet Name="Complementos" EntityType="Self.Complementos" />
+    <EntitySet Name="DisponibilidadHabitaciones" EntityType="Self.DisponibilidadHabitaciones" />
+    <EntitySet Name="Habitaciones" EntityType="Self.Habitaciones" />
+    <EntitySet Name="Insumos" EntityType="Self.Insumos" />
+    <EntitySet Name="Ordenes" EntityType="Self.Ordenes" />
+    <EntitySet Name="OrdenInsumos" EntityType="Self.OrdenInsumos" />
+    <EntitySet Name="Reservas" EntityType="Self.Reservas" />
+    <EntitySet Name="TiposHabitacion" EntityType="Self.TiposHabitacion" />
+    <AssociationSet Name="FK__Ordenes__Cliente__628FA481" Association="Self.FK__Ordenes__Cliente__628FA481">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Ordenes" EntitySet="Ordenes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Disponibi__Habit__75A278F5" Association="Self.FK__Disponibi__Habit__75A278F5">
+      <End Role="TiposHabitacion" EntitySet="TiposHabitacion" />
+      <End Role="DisponibilidadHabitaciones" EntitySet="DisponibilidadHabitaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenInsu__Insum__6754599E" Association="Self.FK__OrdenInsu__Insum__6754599E">
+      <End Role="Insumos" EntitySet="Insumos" />
+      <End Role="OrdenInsumos" EntitySet="OrdenInsumos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ordenes__Habitac__6383C8BA" Association="Self.FK__Ordenes__Habitac__6383C8BA">
+      <End Role="TiposHabitacion" EntitySet="TiposHabitacion" />
+      <End Role="Ordenes" EntitySet="Ordenes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenInsu__Orden__66603565" Association="Self.FK__OrdenInsu__Orden__66603565">
+      <End Role="Ordenes" EntitySet="Ordenes" />
+      <End Role="OrdenInsumos" EntitySet="OrdenInsumos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

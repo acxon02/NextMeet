@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NextMeetModelStoreContainer" CdmEntityContainer="NextMeetEntities">
+    <EntitySetMapping Name="Reservas">
+      <EntityTypeMapping TypeName="NextMeetModel.Reservas">
+        <MappingFragment StoreEntitySet="Reservas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
+          <ScalarProperty Name="HoraFin" ColumnName="HoraFin" />
+          <ScalarProperty Name="TipoHabitacion" ColumnName="TipoHabitacion" />
+          <ScalarProperty Name="Complementos" ColumnName="Complementos" />
+          <ScalarProperty Name="PrecioTotal" ColumnName="PrecioTotal" />
+          <ScalarProperty Name="ClienteNombre" ColumnName="ClienteNombre" />
+          <ScalarProperty Name="ClienteCorreo" ColumnName="ClienteCorreo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

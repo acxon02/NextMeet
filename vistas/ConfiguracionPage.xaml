@@ -1,0 +1,84 @@
+﻿<Page x:Class="NextMeet.ConfiguracionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Configuración" MinWidth="600" MinHeight="500">
+
+    <!-- ScrollViewer para que el contenido sea desplazable -->
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <Grid>
+            <!-- Definir filas y columnas para diseño flexible -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*" />
+                <!-- Fila flexible para la lista de usuarios -->
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <!-- Columna con ancho flexible -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Formulario para registrar nuevo usuario -->
+            <Border Margin="20" Background="White" BorderBrush="#BDC3C7" BorderThickness="1" CornerRadius="10" Padding="20" Grid.Row="0" Grid.ColumnSpan="2">
+                <StackPanel>
+                    <TextBlock Text="Registrar Nuevo Usuario" FontSize="24" FontWeight="SemiBold" Foreground="#2C3E50" Margin="0,0,0,20"/>
+
+                    <StackPanel Orientation="Vertical" Margin="0,10,0,0">
+                        <TextBlock Text="Nombre de Usuario" FontSize="16" Foreground="#2C3E50"/>
+                        <TextBox x:Name="UsernameTextBox" Margin="0,5,0,10"/>
+
+                        <TextBlock Text="Contraseña" FontSize="16" Foreground="#2C3E50"/>
+                        <PasswordBox x:Name="PasswordBox" Margin="0,5,0,10"/>
+
+                        <TextBlock Text="Nombre Completo" FontSize="16" Foreground="#2C3E50"/>
+                        <TextBox x:Name="FullNameTextBox" Margin="0,5,0,10"/>
+
+                        <TextBlock Text="Correo Electrónico" FontSize="16" Foreground="#2C3E50"/>
+                        <TextBox x:Name="EmailTextBox" Margin="0,5,0,10"/>
+
+                        <Button Content="Registrar Usuario" Click="RegisterUser_Click" Margin="20"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Lista de Usuarios Registrados -->
+            <Border Margin="20" Background="White" BorderBrush="#BDC3C7" BorderThickness="1" CornerRadius="10" Padding="20" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                <StackPanel>
+                    <TextBlock Text="Usuarios Registrados" FontSize="24" FontWeight="SemiBold" Foreground="#2C3E50" Margin="0,0,0,20"/>
+
+                    <ListView x:Name="UsersListView" Margin="0,10,0,10">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Username" DisplayMemberBinding="{Binding Username}" Width="200"/>
+                                <GridViewColumn Header="Nombre" DisplayMemberBinding="{Binding Nombre}" Width="250"/>
+                                <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Email}" Width="300"/>
+                                <GridViewColumn Header="Fecha Registro" DisplayMemberBinding="{Binding FechaRegistro}" Width="150"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                    <!-- Botones de Eliminar y Modificar Contraseña -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                        <Button Content="Eliminar" Click="DeleteUser_Click" Margin="5"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </ScrollViewer>
+</Page>
+
+
+
+
+
+
+
+
+
+
+
+
+

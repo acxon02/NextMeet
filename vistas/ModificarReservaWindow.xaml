@@ -1,0 +1,120 @@
+﻿<Window x:Class="NextMeet.ModificarReservaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Modificar Reserva" Height="400" Width="600">
+    <Window.Resources>
+        <!-- Estilo para los botones redondeados con sombra -->
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#3498DB"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#2980B9" BlurRadius="10" ShadowDepth="3" />
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#2980B9"/>
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect Color="#2980B9" BlurRadius="10" ShadowDepth="5"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Nombre del Cliente" />
+            <TextBox Name="NombreClienteTextBox" Margin="0,5" />
+            
+            <TextBlock Text="Correo del Cliente" Margin="10,10,0,0"/>
+            <TextBox Name="CorreoClienteTextBox" Margin="0,5" />
+
+            <TextBlock Text="Fecha de la Reserva" Margin="10,10,0,0"/>
+            <DatePicker Name="FechaDatePicker" Margin="0,5"/>
+
+            <!-- Hora de Inicio -->
+            <TextBlock Text="Hora de Inicio" Margin="10,10,0,0"/>
+            <ComboBox Name="HoraInicioComboBox" Margin="0,5">
+                <ComboBoxItem Content="12:00 AM"/>
+                <ComboBoxItem Content="01:00 AM"/>
+                <ComboBoxItem Content="02:00 AM"/>
+                <ComboBoxItem Content="03:00 AM"/>
+                <ComboBoxItem Content="04:00 AM"/>
+                <ComboBoxItem Content="05:00 AM"/>
+                <ComboBoxItem Content="06:00 AM"/>
+                <ComboBoxItem Content="07:00 AM"/>
+                <ComboBoxItem Content="08:00 AM"/>
+                <ComboBoxItem Content="09:00 AM"/>
+                <ComboBoxItem Content="10:00 AM"/>
+                <ComboBoxItem Content="11:00 AM"/>
+                <ComboBoxItem Content="12:00 PM"/>
+                <ComboBoxItem Content="01:00 PM"/>
+                <ComboBoxItem Content="02:00 PM"/>
+                <ComboBoxItem Content="03:00 PM"/>
+                <ComboBoxItem Content="04:00 PM"/>
+                <ComboBoxItem Content="05:00 PM"/>
+                <ComboBoxItem Content="06:00 PM"/>
+                <ComboBoxItem Content="07:00 PM"/>
+                <ComboBoxItem Content="08:00 PM"/>
+                <ComboBoxItem Content="09:00 PM"/>
+                <ComboBoxItem Content="10:00 PM"/>
+                <ComboBoxItem Content="11:00 PM"/>
+            </ComboBox>
+
+            <!-- Hora de Fin -->
+            <TextBlock Text="Hora de Fin" Margin="10,10,0,0"/>
+            <ComboBox Name="HoraFinComboBox" Margin="0,5">
+                <ComboBoxItem Content="12:00 AM"/>
+                <ComboBoxItem Content="01:00 AM"/>
+                <ComboBoxItem Content="02:00 AM"/>
+                <ComboBoxItem Content="03:00 AM"/>
+                <ComboBoxItem Content="04:00 AM"/>
+                <ComboBoxItem Content="05:00 AM"/>
+                <ComboBoxItem Content="06:00 AM"/>
+                <ComboBoxItem Content="07:00 AM"/>
+                <ComboBoxItem Content="08:00 AM"/>
+                <ComboBoxItem Content="09:00 AM"/>
+                <ComboBoxItem Content="10:00 AM"/>
+                <ComboBoxItem Content="11:00 AM"/>
+                <ComboBoxItem Content="12:00 PM"/>
+                <ComboBoxItem Content="01:00 PM"/>
+                <ComboBoxItem Content="02:00 PM"/>
+                <ComboBoxItem Content="03:00 PM"/>
+                <ComboBoxItem Content="04:00 PM"/>
+                <ComboBoxItem Content="05:00 PM"/>
+                <ComboBoxItem Content="06:00 PM"/>
+                <ComboBoxItem Content="07:00 PM"/>
+                <ComboBoxItem Content="08:00 PM"/>
+                <ComboBoxItem Content="09:00 PM"/>
+                <ComboBoxItem Content="10:00 PM"/>
+                <ComboBoxItem Content="11:00 PM"/>
+            </ComboBox>
+
+            <TextBlock Text="Tipo de Sala" Margin="10,10,0,0"/>
+            <TextBox Name="TipoSalaTextBox" Margin="0,5"/>
+
+            <!-- Botones para guardar o cancelar -->
+            <StackPanel Orientation="Horizontal" Margin="10,20,0,0">
+                <Button Name="GuardarCambios" Content="Guardar Cambios" Width="120" Margin="5" Click="GuardarCambios_Click"/>
+                <Button Name="Cancelar" Content="Cancelar" Width="120" Margin="5" Click="Cancelar_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
+
+
+

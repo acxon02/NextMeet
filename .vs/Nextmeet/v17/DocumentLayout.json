@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USER\\Desktop\\NextMeet\\Nextmeet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{47010F0A-FD2C-492E-8C34-4A3008B2D809}|Nextmeet.csproj|c:\\users\\user\\desktop\\nextmeet\\nextmeet\\vistas\\modificarreservawindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47010F0A-FD2C-492E-8C34-4A3008B2D809}|Nextmeet.csproj|solutionrelative:vistas\\modificarreservawindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47010F0A-FD2C-492E-8C34-4A3008B2D809}|Nextmeet.csproj|C:\\Users\\USER\\Desktop\\NextMeet\\Nextmeet\\vistas\\modificarreservawindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{47010F0A-FD2C-492E-8C34-4A3008B2D809}|Nextmeet.csproj|solutionrelative:vistas\\modificarreservawindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47010F0A-FD2C-492E-8C34-4A3008B2D809}|Nextmeet.csproj|C:\\Users\\USER\\Desktop\\NextMeet\\Nextmeet\\vistas\\pedidospage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{47010F0A-FD2C-492E-8C34-4A3008B2D809}|Nextmeet.csproj|solutionrelative:vistas\\pedidospage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47010F0A-FD2C-492E-8C34-4A3008B2D809}|Nextmeet.csproj|C:\\Users\\USER\\Desktop\\NextMeet\\Nextmeet\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{47010F0A-FD2C-492E-8C34-4A3008B2D809}|Nextmeet.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 183,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Pedidospage.xaml",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\NextMeet\\Nextmeet\\vistas\\Pedidospage.xaml",
+              "RelativeDocumentMoniker": "vistas\\Pedidospage.xaml",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\NextMeet\\Nextmeet\\vistas\\Pedidospage.xaml",
+              "RelativeToolTip": "vistas\\Pedidospage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-02T01:50:51.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ModificarReservaWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\NextMeet\\Nextmeet\\vistas\\ModificarReservaWindow.xaml.cs",
+              "RelativeDocumentMoniker": "vistas\\ModificarReservaWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\NextMeet\\Nextmeet\\vistas\\ModificarReservaWindow.xaml.cs",
+              "RelativeToolTip": "vistas\\ModificarReservaWindow.xaml.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAFgAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T00:44:59.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ModificarReservaWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\NextMeet\\Nextmeet\\vistas\\ModificarReservaWindow.xaml",
+              "RelativeDocumentMoniker": "vistas\\ModificarReservaWindow.xaml",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\NextMeet\\Nextmeet\\vistas\\ModificarReservaWindow.xaml",
+              "RelativeToolTip": "vistas\\ModificarReservaWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-02T01:41:36.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\NextMeet\\Nextmeet\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\NextMeet\\Nextmeet\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-02T01:52:03.994Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
